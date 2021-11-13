@@ -131,3 +131,49 @@ Use `open` command. For example, open the MacOSX 10.15 SDK home directory.
 ```bash
 open /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
 ```
+
+> How can I know my default XCode version?
+
+Use `xcodebuild -version` command.
+
+> Where can I find all the Apple Downloads?
+
+<https://developer.apple.com/download/all/>
+
+> How can I switch my default XCode path?
+
+Use `sudo xcode-select -s`. For example, before switching, I see the following output by typing command `xcode-select -p`:
+
+```bash
+/Applications/Xcode.app/Contents/Developer
+```
+
+After executing `sudo xcode-select -s /Applications/Xcode12.4.app`, my output becomes:
+
+```bash
+/Applications/Xcode12.4.app/Contents/Developer
+```
+
+## Xcode
+
+> Can I debug a release app?
+
+Yes. A release app can still be debugged, but as the code has been compiled with optimization, stepping may behave oddly and variables may not be available.
+
+> How can I attach the code to a running process?
+
+Add some breakpoints. Click **Debug** menu and select **Attach to Process**. For example, in the following image, the code is attached to process Amazon (PID: 6257).
+
+<img src="images/Screen Shot 2021-11-13 at 9.14.52 PM.png" alt="Console Screen Shot" width="480px">
+
+> How can I install a compiled app into Simulator without recompiling it again?
+
+Press Control + Command + R. Or click **Product** menu and select **Perform Action** and select **Run Without Building**.
+
+## Console
+
+> How can I know the process ID of an app running in Simulator?
+
+Open `Console` app and find the running Devices. Select that device and start to log messages. Take some action in the app and find a message from targeted app. The PID can be seen from the Info section. For example, in the following image, the Amazon app PID is 6257 in Simulator iPhone 11.
+
+<img src="images/Screen%20Shot%202021-11-13%20at%208.47.13%20PM.png" alt="Console Screen Shot" width="480px">
