@@ -177,3 +177,27 @@ Press Control + Command + R. Or click **Product** menu and select **Perform Acti
 Open `Console` app and find the running Devices. Select that device and start to log messages. Take some action in the app and find a message from targeted app. The PID can be seen from the Info section. For example, in the following image, the Amazon app PID is 6257 in Simulator iPhone 11.
 
 <img src="images/Screen%20Shot%202021-11-13%20at%208.47.13%20PM.png" alt="Console Screen Shot" width="480px">
+
+## App Transport Security (ATS)
+
+> What problem is App Transport Security (ATS) trying to solve?
+
+To improve privacy and data integrity for all apps and app extension.
+
+> What is App Transport Security (ATS)?
+
+All networking connections made by the app are secured by the Transport Layer Security (TLS) protocol. ATS blocks connections that do not meet minimum security requirements.
+
+Read [Preventing Insecure Network Connections](https://developer.apple.com/documentation/security/preventing_insecure_network_connections) to know more details.
+
+> What is in the scope of ATS?
+
+Networking calls that rely on the URL Loading System. ATS does not apply to calls from lower-level networking interfaces like the Network framework or CFNetwork.
+
+## App Files Format
+
+> What is the usage of .xcconfig?
+
+Define variables to configure build setting. The variables are used for different build phases, such as compiling, code signing, packaging, etc.
+
+Inside a .xcconfig file, we can include other .xcconfig files. The variable key is usually capalized words connected by underscore. The variable value can refer to other variables through ${OTHER_VARIABLE} or other .plist files, .entitlements files, etc.
