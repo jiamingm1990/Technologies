@@ -29,3 +29,9 @@ Use NSAssert from NSException.h.
 // message is an NSString * variable.
 NSAssert(condition, message);
 ```
+
+> What is macro `NS_ASSUME_NONNULL_BEGIN` used for?
+
+This macro is used for indicating that simple pointer types in the audited regions will be assumed to be nonnull. When the header is used from Swift, the code will be cleaner.
+
+Read [Nullability and Objective-C](https://developer.apple.com/swift/blog/?id=25) to know more.
