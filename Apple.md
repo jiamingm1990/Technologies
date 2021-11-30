@@ -194,6 +194,12 @@ Read [Preventing Insecure Network Connections](https://developer.apple.com/docum
 
 Networking calls that rely on the URL Loading System. ATS does not apply to calls from lower-level networking interfaces like the Network framework or CFNetwork.
 
+> What is certificate pinning?
+
+App enabled with ATS will check the certificate of a secure server. It validates the certificate with trusted achnor certificates and trusted root certificates. The trusted certificates are managed at operating system level. Certificate pinning is a technique to do the check at app level. It tightens the trust requirement and limits the set of CAs.
+
+Read [Identity Pinning: How to configure server certificates for your app](https://developer.apple.com/news/?id=g9ejcf8y) to know more details. To do it programatically, read [Performing Manual Server Trust Authentication](https://developer.apple.com/documentation/foundation/url_loading_system/handling_an_authentication_challenge/performing_manual_server_trust_authentication?language=objc).
+
 ## App Files Format
 
 > What is the usage of .xcconfig?
