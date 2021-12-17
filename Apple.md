@@ -170,6 +170,12 @@ Add some breakpoints. Click **Debug** menu and select **Attach to Process**. For
 
 Press Control + Command + R. Or click **Product** menu and select **Perform Action** and select **Run Without Building**.
 
+> How can I format my code in the editor of Xcode?
+
+Use XCFormat. Download it from App Store. Follow the guideline to enable it as an extension.
+
+<img src="images/Screen Shot 2021-12-17 at 11.13.04 AM.png" alt="Console Screen Shot" width="480px">
+
 ## Console
 
 > How can I know the process ID of an app running in Simulator?
