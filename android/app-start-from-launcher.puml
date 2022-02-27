@@ -1,0 +1,19 @@
+@startuml app start from launcher
+
+autonumber
+
+actor PhoneUser as "Phone User"
+participant Launcher
+participant AMS as "Activity Manager Service"
+participant Zygote
+participant TargetedApp as "Targeted App"
+
+PhoneUser -> Launcher: press targeted app icon
+Launcher -> AMS: startActivity
+Launcher <- AMS: startPausingLocked 
+AMS -> Zygote: Process.start(\n"android.app.ActivityThread",\n ...)
+Zygote -> TargetedApp: handleChildProc
+AMS <- TargetedApp: attachApplication
+AMS -> TargetedApp: scheduleLaunchActivity
+
+@enduml
